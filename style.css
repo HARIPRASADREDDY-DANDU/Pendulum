@@ -1,0 +1,83 @@
+body{
+    background-color: antiquewhite;
+    display: grid;
+    place-items: center;
+    height: 90vh;
+}
+
+.rod{
+    width: 500px;
+    height: 12px;
+    background: linear-gradient(336deg, rgba(2,0,36,1) 0%,
+    rgba(93,87,87,1) 0%, rgb(47, 48, 48) 88%);
+    border-style: none;
+    border-radius: 10px;
+    z-index: 1;
+}
+.threadcontainer{
+    display: flex;
+    column-gap: 58px;
+    justify-content: center;
+}
+.threads{
+    width: 2px;
+    height: 350px;
+    background-color: black;
+    
+}
+.ballscontainer{
+    display: flex;
+    justify-content: center;
+}
+
+.balls{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-top: 350px;
+    margin-left: -30px;
+    background: -moz-radial-gradient(circle at 70% 35%, white, #66d63e 30%, #40a31d 50%);
+    background: -webkit-radial-gradient(circle at 70% 35%, white, #66d63e 30%, #40a31d 50%);
+    background: -o-radial-gradient(circle at 70% 35%, white, #66d63e 30%, #40a31d 50%);
+    background: -ms-radial-gradient(circle at 70% 35%, white, #66d63e 30%, #40a31d 50%);
+    background: radial-gradient(circle at 70% 35%, white, #66d63e 30%, #40a31d 50%);
+    border-radius: 50%;
+}
+
+.thread1{
+    transform-origin: 50% 0;
+    animation: thre 3s ease-in-out infinite;
+}
+.thread2{
+    transform-origin: 0% 0;
+    animation: thre2 3s ease-in-out infinite;
+}
+
+@keyframes thre {
+    0%,100%{
+        transform: rotate(30deg); 
+    }
+    25%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes thre2 {
+    0%,25%,100%{
+        transform: rotate(0deg); 
+    }
+    25%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-30deg);
+    }
+    75%{
+        transform: rotate(0deg);
+    }
+}
